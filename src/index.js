@@ -1,9 +1,6 @@
-const getResource = async (url) => {
-  const res = await fetch(url);
-  const body = await res.json();
-  return body;
-};
+import App from "./components/app";
+import { createRoot } from "react-dom/client";
 
-getResource("https://swapi.dev/api/people/1/").then((body) => {
-  console.log(body);
-});
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
